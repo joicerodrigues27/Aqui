@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Interativo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .envelope {
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .envelope:hover {
+            transform: scale(1.1);
+        }
+
+        .message {
+            display: none;
+            font-size: 24px;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="c:\Users\joice\OneDrive\Imagens\emvelope.jfif" alt="Envelope" class="envelope" id="envelope">
+        <div class="message" id="message">Você é incrível!</div>
+    </div>
+
+    <script>
+        document.getElementById("envelope").addEventListener("click", function() {
+            const message = document.getElementById("message");
+            message.style.display = "block";  // Exibe a mensagem ao clicar no envelope
+        });
+    </script>
+</body>
+</html>
